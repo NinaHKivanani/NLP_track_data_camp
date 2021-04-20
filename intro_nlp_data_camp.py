@@ -1,5 +1,5 @@
 
-#-------------------------------------------------#
+#-------------------1.1 Regluar expressions-----------------------#
 
 # Write a pattern to match sentence endings: sentence_endings
 sentence_endings = r"[.?!]"
@@ -19,4 +19,19 @@ print(re.split(spaces, my_string))
 digits = r"\d+"
 print(re.findall(digits, my_string))
 
-#-------------------------------------------------#
+#--------------------2. NLTK------------------------------------#
+# Import necessary modules
+from nltk.tokenize import sent_tokenize
+from nltk.tokenize import word_tokenize
+
+# Split scene_one into sentences: sentences
+sentences = sent_tokenize(scene_one)
+
+# Use word_tokenize to tokenize the fourth sentence: tokenized_sent
+tokenized_sent = word_tokenize(sentences[3])
+
+# Make a set of unique tokens in the entire scene: unique_tokens
+unique_tokens = set(word_tokenize(scene_one))
+
+# Print the unique tokens result
+print(unique_tokens)
